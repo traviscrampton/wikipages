@@ -1,0 +1,13 @@
+<h1><%= @businesstype.category %></h1>
+
+<%= link_to "Add a business", new_businesstype_business_path(@businesstype) %>
+
+<ul>
+<% @businesstype.businesses.each do |business| %>
+  <li>
+  <%= link_to business.name + ", " + business.address, businesstype_business_path(@businesstype, business) %>
+  </li>
+<% end %>
+</ul>
+
+<p>Back to <%= link_to "Categories", businesstypes_path %></p>

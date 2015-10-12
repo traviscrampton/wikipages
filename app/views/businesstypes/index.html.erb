@@ -2,6 +2,6 @@
 
 <ul>
   <% @businesstypes.each do |businesstype| %>
-    <li><%= businesstype.category %></li>
+    <li><%= link_to businesstype.category, businesstype_path(businesstype) %></li>
   <% end %>
 </ul>
