@@ -1,0 +1,8 @@
+<h1><%= @business.name %></h1>
+
+<p><%= @business.address %></p>
+<p><%= @business.phone_number %></p>
+<p><%= @business.website_address %></p>
+<p><%= @business.hours_of_operation %></p>
+
+<p>Back to <%= link_to @businesstype.category, businesstype_path(@businesstype) %></p>
